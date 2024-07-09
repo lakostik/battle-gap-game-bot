@@ -1,10 +1,10 @@
 {
   "name": "telegram-web-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev": "npx wrangler pages dev . --ip '127.0.0.1' & ng s -o",
@@ -42,5 +42,9 @@
     "postcss": "^8.4.26",
     "tailwindcss": "^3.3.3",
     "typescript": "~5.0.2"
-  }
+  },
+  "description": "Game bot",
+  "main": "tailwind.config.js",
+  "author": "lakostik",
+  "license": "ISC"
 }
