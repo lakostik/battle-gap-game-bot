@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page-tg-bg {
+  background: url("./assets/img/tgbg.jpg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}

@@ -28,10 +28,10 @@ export class ApiService {
     const {
       query_id,
       chat: { id: chat_id } = {},
-      user: { id: user_id, is_bot, first_name, last_name, username, photo_url } = {},
+      user: { id: user_id, is_bot, first_name, last_name, username, photo_url} = {},
     } = window.Telegram.WebApp?.initDataUnsafe;
 
-    const telegramUser = { query_id, chat_id, user_id, is_bot, first_name, last_name, username, photo_url };
+    const telegramUser = { query_id, chat_id, user_id, is_bot, first_name, last_name, username, photo_url};
     const payload = { hash, telegramUser };
     return this.http.post(url, payload).pipe(take(1));
   }

@@ -14,6 +14,7 @@ import { EMPTY, catchError, finalize } from 'rxjs';
 })
 export class AppComponent {
   userName = signal(window.Telegram.WebApp?.initDataUnsafe?.user?.first_name);
+  userLastName = signal(window.Telegram.WebApp?.initDataUnsafe?.user?.last_name);
   isAuthenticated = signal(!!window.Telegram.WebApp?.initDataUnsafe?.user);
   apiService = inject(ApiService);
   isLoading = signal(false);

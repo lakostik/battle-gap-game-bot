@@ -52,15 +52,15 @@ export async function onRequest(context: any) {
     const dataCheckString = payload.hash;
     const data = transformInitData(dataCheckString);
     const botToken = context.env.BOT_TOKEN;
-  
+
     const hex = await generateHex(data, botToken);
     if(data['hash'] === hex) {
       return await context.next();
     }
-  
+
     const json = JSON.stringify({ message: 'not authorized' });
     return new Response(json, { status: 403 });
-    
+
   } catch (err) {
     return new Response('Server Error', { status: 500 });
   }
