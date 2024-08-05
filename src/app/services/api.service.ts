@@ -33,6 +33,7 @@ export class ApiService {
 
     const telegramUser = { query_id, chat_id, user_id, is_bot, first_name, last_name, username, photo_url};
     const payload = { hash, telegramUser };
+    console.log(hash, telegramUser);
     return this.http.post(url, payload).pipe(take(1));
   }
 }
